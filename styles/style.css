@@ -6,7 +6,67 @@ header{
     font-family: 'Mulish', sans-serif;
 
     display: flex;
-    justify-content: space-between;
+}
+
+@media(min-width: 940px) {
+    header{
+        justify-content: space-between;
+    }
+
+    #stays-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .stay-card{
+        width: 30%;
+        margin: 8px 0;
+
+    }
+}
+
+@media(min-width: 601px) and (max-width: 940px){
+    header{
+        flex-direction: column;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .search-form{
+        align-self: center;
+        margin: 25px;
+        width: 50%;
+    }
+
+    main{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .stay-card{
+        margin: 40px 0;
+    }
+}
+
+@media(max-width: 600px){
+    header{
+        flex-direction: column;
+    }
+
+    .search-form{
+        align-self: center;
+        margin: 25px;
+    }
+
+    #stays-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stay-card{
+        margin: 15px 0;
+    }
 }
 
 header, main{
@@ -67,6 +127,11 @@ header, main{
     fill: #EB5757;
 }
 
+.main-header{
+    display: flex;
+    justify-content: space-between;
+}
+
 .main-title{
     font-size: 24px;
     font-weight: 700;
@@ -74,17 +139,6 @@ header, main{
     color: #333;
 
     margin-bottom: 8px;
-}
-
-#stays-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.stay-card{
-    width: 30%;
-    margin: 8px 0;
 }
 
 .stay-info{

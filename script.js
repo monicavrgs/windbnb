@@ -17,6 +17,7 @@ async function loadStays(){
 
 async function renderStays(stays){
     let staysContainer = document.getElementById('stays-container')
+    let staysCounter = document.getElementById('stays-counter')
     staysContainer.innerHTML = ""
 
     stays.forEach(stay =>{
@@ -35,6 +36,7 @@ async function renderStays(stays){
         `
 
         staysContainer.innerHTML += stayCard
+        staysCounter.innerHTML = `${stays.length} stays`
     })
 }
 
@@ -54,7 +56,9 @@ async function searchStays(event){
             renderStays(filteredStays)
         }else{
             let staysContainer = document.getElementById('stays-container')
+            let staysCounter = document.getElementById('stays-counter')
             staysContainer.innerHTML = "<p class='no-stays'>No stays to show :(</p>"
+            staysCounter.innerHTML = `${filteredStays.length} stays`
         }
     }
 }
